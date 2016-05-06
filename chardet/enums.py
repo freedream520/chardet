@@ -45,3 +45,18 @@ class MachineState(object):
     start = 0
     error = 1
     its_me = 2
+
+
+class SequenceLikelihood(object):
+    """
+    This enum represents the likelihood of a character following the previous one.
+    """
+    negative = 0
+    unlikely = 1
+    likely = 2
+    positive = 3
+
+    @classmethod
+    def get_num_categories(cls):
+        """:returns: The number of likelihood categories in the enum."""
+        return 4
